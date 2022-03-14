@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "emission_calculator.apps.Emission_calculatorConfig"
+    'emission_calculator',
 ]
 
 MIDDLEWARE = [
