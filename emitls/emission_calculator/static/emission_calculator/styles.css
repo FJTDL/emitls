@@ -1,7 +1,9 @@
-h1 {
-  color:blueviolet;
+/* General rules */
+
+li {
+  display: inline;
 }
 
-marquee {
-  color: yellowgreen;
-}
+/* Class rules */
+
+/* ID rules */
