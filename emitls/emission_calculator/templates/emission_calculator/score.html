@@ -1,0 +1,16 @@
+{% extends './base.html' %} 
+{% load static %} 
+
+{% block content %} 
+
+<div class="center" id="uploadpos">
+  <h1>Emissions questioaire</h1>
+  
+  <FORM METHOD="post">
+    {% csrf_token %}
+    {{ form }}
+    <INPUT TYPE=SUBMIT> <INPUT TYPE=RESET>
+  </FORM>
+</div>
+
+{% endblock %}
