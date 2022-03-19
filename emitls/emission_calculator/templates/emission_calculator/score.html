@@ -6,7 +6,7 @@
 <div class="center" id="uploadpos">
   <h1>Emissions questionaire</h1>
   
-  <FORM METHOD="post">
+  <FORM METHOD="post" ACTION="{% url 'output' %}">
     {% csrf_token %}
     {{ form }}
     <INPUT TYPE=SUBMIT> <INPUT TYPE=RESET>
