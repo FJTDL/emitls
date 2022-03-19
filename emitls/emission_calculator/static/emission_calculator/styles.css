@@ -1,35 +1,144 @@
-/* General rules */
+:root{
+	--bluebackground:#76cbed;
+	--mainbackground:#eaeaea;
+}
 
-li {
-  display: inline;
+body{
+    margin:0;
+    background:var(--mainbackground);
+    font-family: 'Work Sans', sans-serif;
+    font-weight:400;
+}
+
+
+
+header{
+	background: var(--bluebackground);
+	text-align:center;
+	position:fixed;
+  z-index: 999;
+	width:100%;
+}
+
+nav{
+	position: absolute;
+	text-align:left;
+	top:100%;
+	left:0;
+	background:var(--bluebackground);
+	width: 100%;
+	transform: scale(1, 0);
+	transform-origin:top;
+	transition: transform 300ms ease-in-out;
+}
+
+nav ul{
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+
+nav li{
+	margin-bottom:1em;
+	margin-left:1em
+}
+
+nav a{
+	color: white;
+	text-decoration: none;
+	font-size:1.2rem;
+	text-transform: uppercase;
+	opacity:0;
+	transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover{
+	color:#000;
+}
+
+@media screen and (min-width:1150px) {
+	header{
+		display:grid;
+		grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+	}
+	
+	nav{
+		all: unset;
+		grid-column:3/span 1;
+		display:flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	nav ul{
+		display:flex;		
+	}
+	nav li{
+		margin-left:3em;
+		margin-bottom:0;
+	}
+	nav a{
+		opacity: 1;
+		position:relative;
+	}
+	nav a::before{
+		content: '';
+		display:block;
+		height: 5px;
+		background:black;
+		position:absolute;
+		top:-.75em;
+		left:0;
+		right:0;
+		transform:scale(0,1);
+		transition: transform ease-in-out 250ms;
+	}
+	nav a:hover::before{
+		transform: scale(1,1);
+	}
+}
+
+/* Centers elements to the middle of page */
+.center {
+	margin: auto;
+	width: 90%;
+	padding: 10px;
+	text-align: center;
+}
+
+/* Stops the paragraphs from looking like shit */
+p {
+	font-family: 'Work sans', sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
+
+ul {
+	text-align: center;
+	font-family: 'Work sans', sans-serif;
+	font-style: italic;
+}
+
+#uploadpos {
+	margin: auto;
+	width: 60%;
+	padding: 150px;
+}
+
+#scorepos {
+	margin: auto;
+	width: 60%;
+	padding: 100px;
+	border: 5px solid #000;
+	width:fit-content;
+	transform: translate(0, 30%);
+}
+
+#hill {
+  width: 100%;
+  height: auto;
 }
 
 a {
-  font-size: large;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  position: relative;
-  left: 400px;
-  margin-left: 20px;
-  
-}
-
-nav {
-  background-color: #73FF50;
-  margin: 50px 10px;
-}
-
-/* Class rules */
-
-.centre {
-  text-align: center;
-}
-
-/*.nav_bar {
-  
-} */
-
-/* ID rules */
-#hills {
-  width: 1000px;
-  margin: 0 auto;
+  text-decoration: none;
+  color: white;
 }
