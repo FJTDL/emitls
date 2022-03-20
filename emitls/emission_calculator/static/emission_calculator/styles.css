@@ -1,5 +1,5 @@
 :root{
-	--bluebackground:#76cbed;
+	--greenbackground:#228B22;
 	--mainbackground:#eaeaea;
 }
 
@@ -10,10 +10,13 @@ body{
     font-weight:400;
 }
 
-
+a {
+  text-decoration: none;
+  color: white;
+}
 
 header{
-	background: var(--bluebackground);
+	background: var(--greenbackground);
 	text-align:center;
 	position:fixed;
   z-index: 999;
@@ -25,7 +28,7 @@ nav{
 	text-align:left;
 	top:100%;
 	left:0;
-	background:var(--bluebackground);
+	background:var(--greenbackground);
 	width: 100%;
 	transform: scale(1, 0);
 	transform-origin:top;
@@ -105,6 +108,18 @@ nav a:hover{
 	text-align: center;
 }
 
+.row::after {
+	content: "";
+  clear: both;
+  display: table;
+}
+
+.column {
+  float: right;
+  width: 50%;
+  padding: 5px;
+}
+
 /* Stops the paragraphs from looking like shit */
 p {
 	font-family: 'Work sans', sans-serif;
@@ -138,7 +153,13 @@ ul {
   height: auto;
 }
 
-a {
-  text-decoration: none;
-  color: white;
+#legs {
+	margin: auto;
+	width: 40%;
+	height: 800px;
+	margin-top: 150px;
+	margin-bottom: 150px;
+	margin-right: 150px;
+	border-radius: 50%;
+	float: left;
 }

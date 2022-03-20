@@ -12,6 +12,10 @@ def home(request):
   return render(request, "emission_calculator/home.html")
 
 
+def about(request):
+  return render(request, "emission_calculator/about.html")
+
+
 def score(request):
   return render(request, "emission_calculator/score.html", {
         "form": NewTaskForm()
