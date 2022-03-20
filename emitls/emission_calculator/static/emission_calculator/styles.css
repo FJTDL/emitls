@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 :root{
 	--greenbackground:#228B22;
 	--mainbackground:#eaeaea;
@@ -108,16 +112,26 @@ nav a:hover{
 	text-align: center;
 }
 
-.row::after {
-	content: "";
-  clear: both;
-  display: table;
+.row {
+  display: flex;
 }
 
 .column {
-  float: right;
-  width: 50%;
+  flex: 33.33%;
   padding: 5px;
+}
+
+.buggy {
+	position: relative;
+	top: 210px;
+	right: 120px;
+	padding: 0;
+	margin: 0;
+	font-weight: lighter;
+}
+
+.buggy p {
+	font-weight: lighter;
 }
 
 /* Stops the paragraphs from looking like shit */
@@ -155,11 +169,18 @@ ul {
 
 #legs {
 	margin: auto;
-	width: 40%;
+	width: 70%;
 	height: 800px;
 	margin-top: 150px;
 	margin-bottom: 150px;
 	margin-right: 150px;
 	border-radius: 50%;
 	float: left;
+}
+
+#buggy_head {
+	color: #000;
+	font-weight: bold;
+	position:relative;
+	left: 60px;
 }
