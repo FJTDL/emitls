@@ -4,8 +4,20 @@
 {% block content %}
 
 <div class="center" id="scorepos">
+    <h3>With a score of {{ number }}</h3>
     <h2>Based on your results... </h2>
-    <h1> {{ rating }} </h1>
+    <h1 id="target"> {{ rating }} </h1>
+    <script>
+        const target = document.getElementById("target")
+        if (target.textContent === 'Good') {
+            target.style.color = '#0F0';
+        } else if (target.textContent === 'Ok') {
+            target.style.color = '#000';
+        }
+        else {
+            target.style.color = '#F00';
+        }
+    </script>
 </div>
 
 {% endblock %}

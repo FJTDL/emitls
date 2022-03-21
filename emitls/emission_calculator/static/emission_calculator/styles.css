@@ -104,6 +104,14 @@ nav a:hover{
 	}
 }
 
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+
 /* Centers elements to the middle of page */
 .center {
 	margin: auto;
