@@ -108,7 +108,7 @@ nav a:hover{
 .center {
 	margin: auto;
 	width: 90%;
-	padding: 10px;
+	padding: 5px;
 	text-align: center;
 }
 
@@ -131,6 +131,10 @@ nav a:hover{
 }
 
 .buggy p {
+	font-weight: lighter;
+}
+
+.center p {
 	font-weight: lighter;
 }
 

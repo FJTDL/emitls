@@ -8,7 +8,7 @@
   
   <FORM METHOD="post" ACTION="{% url 'output' %}">
     {% csrf_token %}
-    {{ form }}
+    {{ form.as_p }}
     <INPUT TYPE=SUBMIT> <INPUT TYPE=RESET>
   </FORM>
 </div>

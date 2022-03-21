@@ -3,9 +3,9 @@ from django import forms
 from django.http.response import HttpResponseRedirect
 
 class NewTaskForm(forms.Form):
-  electric_car = forms.IntegerField(label="Do you have an electric vehicle?", min_value=0, max_value=100)
-  provider = forms.IntegerField(label="Does your electricity provider generate from renewable sources?", min_value=0, max_value=100)
-  reduce_reuse_recycle = forms.IntegerField(label="Do you recycle, reduce and reuse? (score yourself out of 10)", min_value=0, max_value=100)
+  electric_car = forms.IntegerField(label="Do you currently have an electric vehicle?\n", min_value=0, max_value=100)
+  provider = forms.IntegerField(label="Does your electricity provider use green sources?\n", min_value=0, max_value=100)
+  reduce_reuse_recycle = forms.IntegerField(label="Do you recycle, reduce and reuse?\n", min_value=0, max_value=100)
 
 # Create your views here.
 def home(request):
