@@ -2,10 +2,12 @@ from django.shortcuts import render
 from django import forms
 from django.http.response import HttpResponseRedirect
 
-class NewTaskForm(forms.Form):
-  electric_car = forms.IntegerField(label="Do you currently have an electric vehicle?\n", min_value=0, max_value=100)
-  provider = forms.IntegerField(label="Does your electricity provider use green sources?\n", min_value=0, max_value=100)
-  reduce_reuse_recycle = forms.IntegerField(label="Do you recycle, reduce and reuse?\n", min_value=0, max_value=100)
+class YesNoForm(forms.Form):
+    electric_car = forms.TypedChoiceField(coerce=lambda x: x =='True', choices=((False, 'No'), (True, 'Yes')))
+    provider = forms.TypedChoiceField(coerce=lambda x: x =='True', choices=((False, 'No'), (True, 'Yes')))
+    reduce_reuse_recycle = forms.TypedChoiceField(coerce=lambda x: x =='True', choices=((False, 'No'), (True, 'Yes')))
+                  
+
 
 # Create your views here.
 def home(request):
@@ -18,17 +20,21 @@ def about(request):
 
 def score(request):
   return render(request, "emission_calculator/score.html", {
-        "form": NewTaskForm()
+        "form": YesNoForm()
     })
 
 
 def output(request):
-# model closely off of https://github.com/FJTDL/integratedwork/blob/main/site/carbonsite/landing/views.py
-  electric = int(request.POST['electric_car'])
-  provider = int(request.POST['provider'])
-  rrr = int(request.POST['reduce_reuse_recycle'])
 
-  score = electric + provider + rrr
+  score = 0
+  if request.POST['electric_car'] == "True":
+    score += 1
+    
+  if request.POST['provider'] == "True":
+    score += 1
+
+  if request.POST['reduce_reuse_recycle'] == "True":
+    score += 1
 
   return render(request, 'emission_calculator/output.html', {
     "score": score
