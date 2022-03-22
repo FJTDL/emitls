@@ -7,4 +7,5 @@ urlpatterns = [
   path('calculator', views.score, name='calculate'),
   path('output', views.output, name='output'),
   path('about', views.about, name='about'),
+  path('options', views.options, name='options')
 ]

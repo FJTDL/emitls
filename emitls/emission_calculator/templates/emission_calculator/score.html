@@ -4,8 +4,13 @@
 {% block content %} 
 
 <div class="center" id="uploadpos">
-  <h1>Emissions questionaire</h1>
-  
+  <h1 id="questionaire">Emissions questionaire</h1>
+  <section id="definitions">
+    <h4>The following questions:</h4>
+    <h4>Do you own an electric vehicle?</h4>
+    <h4>Does your electricity provider generate from renewable technology?</h4>
+    <h4>Do you do any of: reducing, reusing or recycling your waste?</h4>
+  </section>
   <FORM METHOD="post" ACTION="{% url 'output' %}">
     {% csrf_token %}
     {{ form.as_p }}
