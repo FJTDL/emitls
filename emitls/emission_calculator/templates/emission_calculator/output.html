@@ -4,9 +4,10 @@
 {% block content %}
 
 <div class="center" id="scorepos">
-    <h3>With a score of {{ number }}</h3>
     <h2>Based on your results... </h2>
-    {% if number == 1 %}
+    {% if number == 0 %}
+    <h1 style="color:maroon">AWFUL</h1>
+    {% elif number == 1 %}
     <h1 style="color: red">Bad</h1>
     {% elif number == 2 %}
     <h1 style="color: blue;">Ok</h1>
@@ -16,5 +17,14 @@
     <h1>WTF</h1>
     {% endif %}
 </div>
+<div class="alternatives">
+    <h4 class="center">Based on your results we suggest:</h4>
+</div>
+
+    {% if electric == "False" %}
+    <h1 style="margin-top: 200px; text-align: center;">An electric car!</h1>
+    {% else %}
+    <h1 style="margin-top: 200px; text-align: center;">Not, an electric car!</h1>
+    {% endif %}
 
 {% endblock %}

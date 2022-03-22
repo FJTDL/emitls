@@ -40,26 +40,9 @@ def output(request):
   if request.POST['reduce_reuse_recycle'] == "True":
     score += 1
 
-  if score <= 1:
-    output = "Bad"
-  elif score == 2:
-    output = "Ok"
-  elif score == 3:
-    output = "Good"
-  else:
-    output = "How"
-
-  # if output == "Bad":
-  #   output = Fore.RED + output
-  # elif output == "Ok":
-  #   output = Fore.BLUE + output
-  # elif output == "Good":
-  #   output = Fore.GREEN + output
-  # else:
-  #   pass
-
-
   return render(request, 'emission_calculator/output.html', {
     "number": score,
-    "rating": output
+    "electric": request.POST['electric_car'],
+    "provider": request.POST['provider'],
+    "rrr": request.POST['reduce_reuse_recycle'],
   })
