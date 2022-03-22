@@ -6,18 +6,15 @@
 <div class="center" id="scorepos">
     <h3>With a score of {{ number }}</h3>
     <h2>Based on your results... </h2>
-    <h1 id="target"> {{ rating }} </h1>
-    <script>
-        const target = document.getElementById("target")
-        if (target.textContent === 'Good') {
-            target.style.color = '#0F0';
-        } else if (target.textContent === 'Ok') {
-            target.style.color = '#000';
-        }
-        else {
-            target.style.color = '#F00';
-        }
-    </script>
+    {% if number == 1 %}
+    <h1 style="color: red">Bad</h1>
+    {% elif number == 2 %}
+    <h1 style="color: blue;">Ok</h1>
+    {% elif number == 3 %}
+    <h1 style="color: green;">Good</h1>
+    {% else %}
+    <h1>WTF</h1>
+    {% endif %}
 </div>
 
 {% endblock %}
