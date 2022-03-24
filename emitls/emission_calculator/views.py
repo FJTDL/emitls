@@ -22,6 +22,10 @@ def options(request):
   return render(request, "emission_calculator/options.html")
 
 
+def electric(request):
+  return render(request, "emission_calculator/electric.html")
+
+
 def score(request):
   return render(request, "emission_calculator/score.html", {
         "form": YesNoForm()

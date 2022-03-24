@@ -2,7 +2,20 @@
 {% load static %} 
 
 {% block content %}
-
-
+  <a href="{% url 'electric' %}">
+    <section class="box">
+      <div class="row">
+        <div class="column">
+          <h2 id="electric_head">Electric Vehicles</h2>
+          <img src="{% static '../static/images/electric_car.png' %}" id="electric_car">
+        </div>
+        <div class="column">
+          <p class="brief_text">Electric vehicles are an excellent way to cut your emission on the road and save on fuel prices.</p>
+          <p class="brief_text">They are pretty expensive to buy though.</p>
+        </div>
+      </div>
+      </div>
+    </section>
+  </a>
 
 {% endblock %}

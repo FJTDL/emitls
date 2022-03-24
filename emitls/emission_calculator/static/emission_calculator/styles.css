@@ -15,6 +15,11 @@ body{
 }
 
 a {
+	text-decoration: none;
+	color: #000;
+}
+
+header a {
   text-decoration: none;
   color: white;
 }
@@ -146,7 +151,30 @@ nav a:hover{
 	font-weight: lighter;
 }
 
-/* Stops the paragraphs from looking like shit */
+.box {
+	margin: 0 auto;
+	position: relative;
+	top: 100px;
+	width: 70%;
+	box-sizing: border-box;
+	border: 1px solid #228B22;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+.brief_text {
+	font-weight: normal;
+	position: relative;
+	top: 50px;
+}
+
 p {
 	font-family: 'Work sans', sans-serif;
 	font-weight: bold;
@@ -203,4 +231,19 @@ ul {
 
 #definitions {
 	margin-bottom: 50px;
+}
+
+#thing {
+	text-align: center;
+	position: relative;
+	top: 100px;
+}
+
+#electric_car {
+	width: 100%;
+}
+
+#electric_head {
+	position: relative;
+	left: 120px;
 }
