@@ -164,6 +164,11 @@ nav a:hover{
   display: flex;
 }
 
+.option_head {
+	position: relative;
+	left: 120px;
+}
+
 .column {
   flex: 33.33%;
   padding: 5px;
@@ -243,7 +248,13 @@ ul {
 	width: 100%;
 }
 
-#electric_head {
+#renewable {
 	position: relative;
-	left: 120px;
+	left: 1px;
+	width: 70%;
+}
+
+#rrr {
+	position: relative;
+	left: 20px;
 }

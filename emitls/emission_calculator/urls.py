@@ -9,4 +9,6 @@ urlpatterns = [
   path('about', views.about, name='about'),
   path('options', views.options, name='options'),
   path('electric', views.electric, name='electric'),
+  path('provider', views.provider, name='provider'),
+  path('reduce_reuse_recycle', views.reduce_reuse_recycle, name='reduce_reuse_recycle'),
 ]

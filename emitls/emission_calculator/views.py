@@ -26,6 +26,14 @@ def electric(request):
   return render(request, "emission_calculator/electric.html")
 
 
+def provider(request):
+  return render(request, "emission_calculator/provider.html")
+
+
+def reduce_reuse_recycle(request):
+  return(request, "emission_calculator/rrr.html")
+
+
 def score(request):
   return render(request, "emission_calculator/score.html", {
         "form": YesNoForm()
