@@ -2,8 +2,9 @@
 {% load static %} 
 
 {% block content %}
-  <a href="{% url 'electric' %}">
-    <section class="box">
+  
+  <section class="box">
+    <a href="{% url 'electric' %}">
       <div class="row">
         <div class="column">
           <h2 class="option_head">Electric Vehicles</h2>
@@ -13,45 +14,46 @@
           <p class="brief_text">Electric vehicles are an excellent way to cut your emission on the road and save on fuel prices.</p>
           <p class="brief_text">They are pretty expensive to buy though.</p>
         </div>
+        <button class="more">TELL ME MORE</button>
       </div>
-      </div>
-    </section>
-  </a>
+    </a>
+  </section>
+  
 
   <br>
 
-  <a href="{% url 'provider' %}">
-    <section class="box">
+  <section class="box">
+    <a href="{% url 'provider' %}">
       <div class="row">
         <div class="column">
-          <h2 class="option_head">Provider</h2>
+          <h2 class="option_head">Providers</h2>
           <img src="{% static '../static/images/solar.jpg' %}" id="renewable">
         </div>
         <div class="column">
-          <p class="brief_text">Making sure you get your electricity from a renewable souce is an excellent way to cut your emissions down.</p>
-          <p class="brief_text">Sometimes, it's even cheaper!</p>
+          <p class="brief_text">Switching your electricity provider is an excellent way to decrease your emissions, and potentially save some money!</p>
         </div>
+        <button class="more">TELL ME MORE</button>
       </div>
-      </div>
-    </section>
-  </a>
+    </a>
+  </section>
 
   <br>
 
-  <a href="{% url 'reduce_reuse_recycle' %}">
-    <section class="box">
+  <section class="box" id="final">
+    <a href="{% url 'reduce_reuse_recycle' %}">
       <div class="row">
         <div class="column">
-          <h2 id="rrr" class="option_head">Reduce Reuse Recycle</h2>
-          <img src="{% static '../static/images/bin.jpg' %}" id="renewable">
+          <h2 class="option_head">Reduce Reuse Recycle</h2>
+          <img src="{% static '../static/images/bin.jpg' %}" id="rrr">
         </div>
         <div class="column">
-          <p class="brief_text">Making sure you get your electricity from a renewable souce is an excellent way to cut your emissions down.</p>
-          <p class="brief_text">Sometimes, it's even cheaper!</p>
+          <p class="brief_text">Start small: If you can reduce, reuse or recycle what would otherwise be waste, you your total emissions by preventing it decomposing in landfill.</p>
         </div>
+        <button class="more">TELL ME MORE</button>
       </div>
-      </div>
-    </section>
-  </a>
+    </a>
+  </section>
+
+  <br>
 
 {% endblock %}

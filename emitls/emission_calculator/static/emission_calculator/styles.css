@@ -166,7 +166,7 @@ nav a:hover{
 
 .option_head {
 	position: relative;
-	left: 120px;
+	left: 10px;
 }
 
 .column {
@@ -178,6 +178,15 @@ nav a:hover{
 	font-weight: normal;
 	position: relative;
 	top: 50px;
+	right: 40px;
+}
+
+.more {
+	position: relative;
+	bottom: 1px;
+	background-color: #228B22;
+	color: #fff;
+	border: none;
 }
 
 p {
@@ -245,7 +254,7 @@ ul {
 }
 
 #electric_car {
-	width: 100%;
+	width: 70%;
 }
 
 #renewable {
@@ -256,5 +265,10 @@ ul {
 
 #rrr {
 	position: relative;
-	left: 20px;
+	left: 1px;
+	width: 70%;
+}
+
+#final {
+	margin-bottom: 100px;
 }
