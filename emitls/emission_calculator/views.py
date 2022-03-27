@@ -7,6 +7,7 @@ class YesNoForm(forms.Form):
     electric_car = forms.TypedChoiceField(coerce=lambda x: x =='True', choices=((False, 'No'), (True, 'Yes')))
     provider = forms.TypedChoiceField(coerce=lambda x: x =='True', choices=((False, 'No'), (True, 'Yes')))
     reduce_reuse_recycle = forms.TypedChoiceField(coerce=lambda x: x =='True', choices=((False, 'No'), (True, 'Yes')))
+    budget = forms.IntegerField(label="budget", min_value=0)
 
 
 # Create your views here.
@@ -57,4 +58,5 @@ def output(request):
     "electric": request.POST['electric_car'],
     "provider": request.POST['provider'],
     "rrr": request.POST['reduce_reuse_recycle'],
+    "budget": int(request.POST['budget']),
   })

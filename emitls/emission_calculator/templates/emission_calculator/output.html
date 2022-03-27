@@ -21,10 +21,67 @@
     <h4 class="center">Based on your results we suggest:</h4>
 </div>
 
-    {% if electric == "False" %}
-    <h1 style="margin-top: 200px; text-align: center;">An electric car!</h1>
+    {% if electric == "False" and budget > 70000 %}
+    <section class="box">
+        <a href="{% url 'electric' %}">
+          <div class="row">
+            <div class="column">
+              <h2 class="option_head">Electric Vehicles</h2>
+              <img src="{% static '../static/images/electric_car.png' %}" id="electric_car">
+            </div>
+            <div class="column">
+              <p class="brief_text">Electric vehicles are an excellent way to cut your emission on the road and save on fuel prices.</p>
+              <p class="brief_text">They are pretty expensive to buy though.</p>
+            </div>
+            <button class="more">TELL ME MORE</button>
+          </div>
+        </a>
+      </section>
+    {% elif provider == "False" %}
+    <section class="box">
+        <a href="{% url 'provider' %}">
+          <div class="row">
+            <div class="column">
+              <h2 class="option_head">Providers</h2>
+              <img src="{% static '../static/images/solar.jpg' %}" id="renewable">
+            </div>
+            <div class="column">
+              <p class="brief_text">Switching your electricity provider is an excellent way to decrease your emissions, and potentially save some money!</p>
+            </div>
+            <button class="more">TELL ME MORE</button>
+          </div>
+        </a>
+    </section>
+    {% elif rrr == "False"%}
+    <section class="box" id="final">
+        <a href="{% url 'reduce_reuse_recycle' %}">
+          <div class="row">
+            <div class="column">
+              <h2 class="option_head">Reduce Reuse Recycle</h2>
+              <img src="{% static '../static/images/bin.jpg' %}" id="rrr">
+            </div>
+            <div class="column">
+              <p class="brief_text">Start small: If you can reduce, reuse or recycle what would otherwise be waste, you your total emissions by preventing it decomposing in landfill.</p>
+            </div>
+            <button class="more">TELL ME MORE</button>
+          </div>
+        </a>
+    </section>
     {% else %}
-    <h1 style="margin-top: 200px; text-align: center;">Not, an electric car!</h1>
+    <section class="box" id="final">
+        <a href="{% url 'home' %}">
+          <div class="row">
+            <div class="column">
+              <h2 class="option_head">YOU'RE FINE BY US</h2>
+              <img src="{% static '../static/images/thumb.png' %}" id="pog">
+            </div>
+            <div class="column">
+              <p class="brief_text" id="amazing">By all our measures, you're really good. If you want do more we encourage you to find more resources online!</p>
+            </div>
+            <button class="more">TELL ME MORE</button>
+          </div>
+        </a>
+    </section>
     {% endif %}
 
 {% endblock %}

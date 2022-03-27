@@ -269,6 +269,18 @@ ul {
 	width: 70%;
 }
 
+#pog {
+	position: relative;
+	left: 1px;
+	width: 30%;
+
+}
+
 #final {
 	margin-bottom: 100px;
+}
+
+#amazing {
+	position: relative;
+	bottom: 10px;
 }
