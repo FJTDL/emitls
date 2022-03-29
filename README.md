@@ -20,3 +20,15 @@ Index.
 A lot was set up in remarkably short time, however this is the simple beginnings stage of the project and work is bound to be easier to complete at this stage and become more difficult as time progresses.
 
 Oh and the name was deliberately chosen to be annoying, as every tech company these days seems to rely on stupid naming conventions to promote themselves and their products.
+
+
+23/03/22
+
+Well, yesterday saw all basic features operating as intended:
+
+Calculator determines range, colours and recommends appropriately.
+Options page includes three options in boxes.
+About page is dripping with front end hatred.
+
+However, I decided that this was simply not enough and elected to force myself to do Users.
+Seeing as I have now spent a day tearing my hair out trying to determine how to do a signup, login and logout, I'd say it's going great -_- .
