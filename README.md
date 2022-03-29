@@ -32,3 +32,4 @@ About page is dripping with front end hatred.
 
 However, I decided that this was simply not enough and elected to force myself to do Users.
 Seeing as I have now spent a day tearing my hair out trying to determine how to do a signup, login and logout, I'd say it's going great -_- .
+I've found a youtube tutorial series that I can follow and I hope that will provide the adequate information needed to build the remaining infrastructure.
