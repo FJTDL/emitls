@@ -11,4 +11,5 @@ urlpatterns = [
   path('electric', views.electric, name='electric'),
   path('provider', views.provider, name='provider'),
   path('reduce_reuse_recycle', views.reduce_reuse_recycle, name='reduce_reuse_recycle'),
+  path('signup/', views.signup, name='signup'),
 ]

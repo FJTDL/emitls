@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django import forms
 from django.http.response import HttpResponseRedirect
-from colorama import Fore
+from django.contrib.auth.forms import UserCreationForm
 
 class YesNoForm(forms.Form):
     electric_car = forms.TypedChoiceField(coerce=lambda x: x =='True', choices=((False, 'No'), (True, 'Yes')))
@@ -60,3 +60,8 @@ def output(request):
     "rrr": request.POST['reduce_reuse_recycle'],
     "budget": int(request.POST['budget']),
   })
+
+
+def signup(request):
+  form = UserCreationForm()
+  return render(request, 'emission_calculator/signup.html', {'form': form})

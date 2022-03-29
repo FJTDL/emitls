@@ -284,3 +284,8 @@ ul {
 	position: relative;
 	bottom: 10px;
 }
+
+#signup_form {
+	position: relative;
+	top: 200px;
+}
