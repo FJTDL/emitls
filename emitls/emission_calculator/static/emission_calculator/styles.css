@@ -160,15 +160,6 @@ nav a:hover{
 	border: 1px solid #228B22;
 }
 
-.signup-form {
-	position: relative;
-	top: 200px;
-	display: flex;
-	width: 420px;
-	flex-direction: column;
-	margin: auto;
-}
-
 .row {
   display: flex;
 }

@@ -1,9 +1,7 @@
 from django.shortcuts import render
 from django import forms
-from django.views.generic.edit import CreateView
-from django.contrib.auth.forms import UserCreationForm
-from django.urls import reverse_lazy
-
+from django.http.response import HttpResponseRedirect
+from colorama import Fore
 
 class YesNoForm(forms.Form):
     electric_car = forms.TypedChoiceField(coerce=lambda x: x =='True', choices=((False, 'No'), (True, 'Yes')))
@@ -62,12 +60,3 @@ def output(request):
     "rrr": request.POST['reduce_reuse_recycle'],
     "budget": int(request.POST['budget']),
   })
-
-
-# Class based views
-
-
-class SignUp(CreateView):
-  form_class = UserCreationForm
-  success_url = reverse_lazy("login")
-  template_name = "emission_calculator/signup.html"
