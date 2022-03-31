@@ -16,4 +16,5 @@ urlpatterns = [
   path('reduce_reuse_recycle', views.reduce_reuse_recycle, name='reduce_reuse_recycle'),
   path('register', views.register, name='register'),
   path('login', views.login_request, name='login'),
+  path('logout', views.logout_request, name='logout'),
 ]
