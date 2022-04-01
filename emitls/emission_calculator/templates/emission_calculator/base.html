@@ -16,12 +16,6 @@
           <li><a href="{% url 'calculator:calculate' %}" >Calculate</a></li>
           <li><a href="{% url 'calculator:options' %}">Options</a></li>
           <li><a href="{% url 'calculator:about' %}">About</a></li>
-          {% if user.is_authenticated %}
-          <li><a href="{% url 'calculator:logout' %}">Logout</a></li>
-          <li><a href="#">My account</a></li>
-          {% else %}
-          <li><a href="{% url 'calculator:register' %}">Signup</a></li>
-          {% endif %}
         </ul>
       </nav>
     </header>
