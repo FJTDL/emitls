@@ -216,7 +216,7 @@ ul {
 	transform: translate(0, 30%);
 }
 
-#hill {
+.fit {
   width: 100%;
   height: auto;
 }
@@ -288,4 +288,9 @@ ul {
 #signup_form {
 	position: relative;
 	top: 150px;
+}
+
+#logout {
+	position: relative;
+	top: 200px;
 }

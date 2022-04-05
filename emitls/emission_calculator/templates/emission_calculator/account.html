@@ -1,0 +1,10 @@
+{% extends './base.html' %}
+{% load static %} 
+
+{% block content %}
+
+<h1 class="center" id="logout"><a href="{% url 'calculator:logout' %}" >Click me to logout!</a></h1>
+
+<h1 id="logout">Hello {{ user }}!</h1>
+
+{% endblock %}
