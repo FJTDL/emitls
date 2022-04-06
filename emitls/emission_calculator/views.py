@@ -41,23 +41,28 @@ def score(request):
 
 def output(request):
 
-  score = 0
-  if request.POST['electric_car'] == "True":
-    score += 1
-    
-  if request.POST['provider'] == "True":
-    score += 1
+		score = 0
+		if request.POST['electric_car'] == "True":
+			score += 1
+			
+		if request.POST['provider'] == "True":
+			score += 1
 
-  if request.POST['reduce_reuse_recycle'] == "True":
-    score += 1
+		if request.POST['reduce_reuse_recycle'] == "True":
+			score += 1
 
-  return render(request, 'emission_calculator/output.html', {
-    "number": score,
-    "electric": request.POST['electric_car'],
-    "provider": request.POST['provider'],
-    "rrr": request.POST['reduce_reuse_recycle'],
-    "budget": int(request.POST['budget']),
-  })
+		user = request.user
+		if user.is_authenticated:
+			user.score = score
+			user.save()
+
+		return render(request, 'emission_calculator/output.html', {
+			"number": score,
+			"electric": request.POST['electric_car'],
+			"provider": request.POST['provider'],
+			"rrr": request.POST['reduce_reuse_recycle'],
+			"budget": int(request.POST['budget']),
+		})
 
 def register(request):
 	if request.method == "POST":
